@@ -7,6 +7,6 @@
 
   .article_content= article.body
 
-  = render 'user_info', :article => article, :profile_size => "100"
+  = render 'shared/user_info', :article => article, :profile_size => "100"
 
 = article.bottom(@articles, articles_path)

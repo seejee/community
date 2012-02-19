@@ -26,4 +26,6 @@ Community::Application.routes.draw do
 
   match '/about',     to: 'pages#show', id: 'about', as: 'about'
   match '/pages/:id', to: 'pages#show', as: 'page'
+
+  match '/search' => 'search#index'
 end

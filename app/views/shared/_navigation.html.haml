@@ -10,6 +10,9 @@
       = link_to "Unicorns", page_path("unicorns")
     - else
       = link_to "About", about_path
+    %form{:id => "search", :action => "/search", :method => "GET"}
+      %input{:type => "text", :name => "query"}
+      %input#submit{:type => "submit"}
     %span#account
       - if current_user
         = link_to current_user.name, person_path(current_user.github)
