@@ -23,6 +23,7 @@ gem "rest-client", '~> 1.6.3' # For University-Web
 
 gem "twitter",  :require => false
 gem "whenever", :require => false
+gem 'texticle', '~> 2.0', :require => 'texticle/rails'
 
 gem 'newman', '~> 0.1.1'
 
