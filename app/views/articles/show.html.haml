@@ -2,7 +2,7 @@
 
 = render :partial => "header"
 
-= render :partial => "shared/article", :locals => { :article => @article }
+= render :partial => "article", :locals => { :article => @article }
 
 - if @article.editable_by?(current_user)
   .control-bar

@@ -10,7 +10,7 @@ class SearchTest < ActionDispatch::IntegrationTest
   test "articles can be searched" do
     visit articles_path
 
-    within("#search") do
+    within("#search-nav") do
       fill_in "query", :with => "interesting"
       click_button "submit" 
     end

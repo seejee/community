@@ -24,6 +24,17 @@ $(function(){
     $(this).bigtext({maxfontsize: fontsize});
   });
 
+  $('a.search-hover').click(function() {
+    $('div#search-nav').fadeToggle(function() {
+      $('.query').focus();
+    });
+  });
+
+  $('.close').click(function() {
+    $('div#search-nav').fadeOut();
+    return false;
+  });
+
 })
 
 $('a[data-submit]').live('click', function(e){

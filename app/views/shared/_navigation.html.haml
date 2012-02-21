@@ -10,12 +10,14 @@
       = link_to "Unicorns", page_path("unicorns")
     - else
       = link_to "About", about_path
-    %form{:id => "search", :action => "/search", :method => "GET"}
-      %input{:type => "text", :name => "query"}
-      %input#submit{:type => "submit"}
+    %a.search-hover= "Search" 
     %span#account
       - if current_user
         = link_to current_user.name, person_path(current_user.github)
         = link_to "Sign out", logout_path
       - else
         = link_to "Sign in with Github", login_path
+#search-nav
+  %form{:action => "/search", :method => "GET"}
+    %input{:type => "text", :name => "query", :class => "query"}
+  %button.close= "X"

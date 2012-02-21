@@ -1,5 +1,7 @@
 - content_for(:title) { "Search results" }
 
-#articles= render :partial => "shared/article", :collection => @articles
+= render :partial => "header"
 
-= will_paginate @articles
+#articles= render :partial => "articles/article", :collection => @results.articles
+
+= will_paginate @results.articles
