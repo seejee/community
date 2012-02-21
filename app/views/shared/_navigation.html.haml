@@ -20,4 +20,5 @@
 #search-nav
   %form{:action => "/search", :method => "GET"}
     %input{:type => "text", :name => "query", :class => "query"}
+    %input{:type => "submit", :id => "submit", :class => "hidden"}
   %button.close= "X"
