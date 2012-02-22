@@ -28,6 +28,7 @@ $(function(){
     $('div#search-nav').fadeToggle(function() {
       $('.query').focus();
     });
+    return false;
   });
 
   $('.close').click(function() {
@@ -35,6 +36,20 @@ $(function(){
     return false;
   });
 
+  //polyfill for placeholders in non-html5 browsers
+  $('[placeholder]').focus(function() {
+    var input = $(this);
+    if (input.val() == input.attr('placeholder')) {
+      input.val('');
+      input.removeClass('placeholder');
+    }
+  }).blur(function() {
+    var input = $(this);
+    if (input.val() == '' || input.val() == input.attr('placeholder')) {
+      input.addClass('placeholder');
+      input.val(input.attr('placeholder'));
+    }
+  }).blur();
 })
 
 $('a[data-submit]').live('click', function(e){

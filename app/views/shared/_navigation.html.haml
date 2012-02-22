@@ -10,7 +10,7 @@
       = link_to "Unicorns", page_path("unicorns")
     - else
       = link_to "About", about_path
-    %a.search-hover= "Search" 
+    = link_to "Search", "", :class => "search-hover"
     %span#account
       - if current_user
         = link_to current_user.name, person_path(current_user.github)
@@ -19,6 +19,6 @@
         = link_to "Sign in with Github", login_path
 #search-nav
   %form{:action => "/search", :method => "GET"}
-    %input{:type => "text", :name => "query", :class => "query"}
+    %input.query.placeholder{:type => "text", :name => "query", :placeholder => "Search..."}
     %input{:type => "submit", :id => "submit", :class => "hidden"}
-  %button.close= "X"
+  %input.close{:type => "submit", :value => "X"}

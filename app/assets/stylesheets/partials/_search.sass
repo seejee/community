@@ -5,18 +5,27 @@
   display: none
   z-index: 999
   background-color: #3A3D50
+
   -moz-border-radius: 5px
+  border-radius: 5px
+
+  -moz-box-shadow: 5px 5px 5px #888
+  -webkit-box-shadow: 5px 5px 5px #888
+  box-shadow: 5px 5px 5px #888
 
   position: absolute
   right: 150px
-  border-radius: 5px
   float: left
 
   form
     display: inline
 
+  .placeholder
+    color: #aaa
+
   .query
     margin: 5px
+    width: 150px
 
   .hidden
     margin:  0px
@@ -28,5 +37,5 @@
 
   .close
     width: 20px
-    margin: 5px
+    margin-right: 5px
     padding: 5px
